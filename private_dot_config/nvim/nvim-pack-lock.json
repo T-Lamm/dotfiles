@@ -1,0 +1,32 @@
+{
+  "plugins": {
+    "diffview": {
+      "rev": "4516612fe98ff56ae0415a259ff6361a89419b0a",
+      "src": "https://github.com/sindrets/diffview.nvim"
+    },
+    "lspconfig": {
+      "rev": "8fde495949782bb61c2605174e231d145a048d8c",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "mason": {
+      "rev": "12ddd182d9efbdc848b540f16484a583d52da0fb",
+      "src": "https://github.com/mason-org/mason.nvim"
+    },
+    "minipick": {
+      "rev": "437d44eb57312f23e6b931704694fc294922cd88",
+      "src": "https://github.com/nvim-mini/mini.pick"
+    },
+    "neoscroll": {
+      "rev": "c8d29979cb0cb3a2437a8e0ae683fd82f340d3b8",
+      "src": "https://github.com/karb94/neoscroll.nvim"
+    },
+    "tree-sitter": {
+      "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter.git"
+    },
+    "vimfugitive": {
+      "rev": "3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0",
+      "src": "https://github.com/tpope/vim-fugitive"
+    }
+  }
+}
