@@ -1,17 +1,45 @@
 -- general nvim .opt.fig
 vim.opt.number = true	
 vim.opt.relativenumber = true
-vim.opt.signcolumn = 'yes'
+vim.opt.cursorline = true
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 10
+--search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+--Indentation
 vim.opt.autoindent = true
 vim.opt.expandtab = true
-vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftround = true
-vim.opt.ignorecase = true
+vim.opt.cindent = true
+vim.opt.smartindent = true
+
+--encoding
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
+
+
+--performance
+vim.opt.synmaxcol = 300 -- Syntax highlighting limit
+vim.opt.updatetime = 300
+vim.opt.redrawtime = 10000
+vim.opt.maxmempattern = 20000
+
+
+--visual
+vim.opt.signcolumn = 'yes'
+vim.opt.showmatch = true
+vim.opt.showbreak = '↳ '
+
+
+
+
 vim.opt.list = true
-vim.opt.cursorline = true
-vim.opt.smartcase = true
 vim.opt.mouse = 'nvi'
 vim.opt.spelllang = { 'en_us', 'de' }
 vim.opt.spell = true
@@ -19,11 +47,19 @@ vim.opt.spell = true
 vim.opt.virtualedit = "onemore"
 vim.opt.termguicolors = true
 vim.opt.swapfile = false
-vim.opt.scrolloff = 8
---vim.opt.completeopt = { "menuone", "popup", "noinsert" } -- options for completion menu
 
---vim.cmd.filetype("plugin indent.opt.") --Enable file type detection
+vim.opt.virtualedit = "block" -- Allow cursor to move where there is no text in visual block mode
+vim.opt.winminwidth = 5
 
+
+-- backuphandeling
+vim.opt.backup = false -- Don't create backup files
+vim.opt.writebackup = false -- Don't create backup before writing
+vim.opt.swapfile = false -- Don't create swap files
+vim.opt.undofile = true
+vim.opt.undodir = vim.fn.expand("/mnt/hdd1tb/undotmp")
+-----vim.opt.completeopt = { "menuone", "popup", "noinsert" } -- options for completion menu
+--
 
 -- Netrw Settings
 vim.g.netrw_liststyle = 3
