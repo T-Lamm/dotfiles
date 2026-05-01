@@ -1,6 +1,12 @@
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+vim.lsp.config('*', {
+    capabilities = capabilities
+})
+
 vim.lsp.enable({
     --bash
-    "bashks",
+    "bashls",
     --lua
     "lua_ls",
     --Python might need additional setup
@@ -11,6 +17,7 @@ vim.lsp.enable({
     --latex
     "texlab",
     --rust
-    "rust"
+    "rust-analyzer"
 })
+
 

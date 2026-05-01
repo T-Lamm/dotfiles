@@ -26,13 +26,6 @@ vim.keymap.set("n", "<leader>vv", '"+p' )
 vim.keymap.set("n", "<leader>VV", '"+P' )
 vim.keymap.set("v", "p", '"_dp', opts)
 
-
-vim.keymap.set("i", "`", "``<left>")
-vim.keymap.set("i", '"', '""<left>')
-vim.keymap.set("i", "(", "()<left>")
-vim.keymap.set("i", "[", "[]<left>")
-vim.keymap.set("i", "{", "{}<left>")
-vim.keymap.set("i", "<", "<><left>")
 --toggle line Wrap
 vim.keymap.set("n", "<leader>lw", "<cmd>set wrap!<CR>", { desc = "Toggle Wrap", silent = true })
 
@@ -46,7 +39,11 @@ vim.keymap.set("n", "<leader>ls", "<cmd>set spell false <cr>" )
 
 --Netrw
 --
-vim.keymap.set("n", "<leader>zz", "<cmd>:Lexplore %:p:h<cr>")
+--vim.keymap.set("n", "<leader>zz", "<cmd>:Lexplore %:p:h<cr>")
+--nvim-tree
+--vim.keymap.set("")
+vim.keymap.set("n", "<leader>zz", "<cmd>NvimTreeToggle<cr>", opt)
+vim.keymap.set("n", "<leader>zf", "<cmd>NvimTreeFindFile<cr>", opt)
 -- buffers
 vim.keymap.set("n", "<leader>b",  "", { desc = "buffers" })
 vim.keymap.set("n", "<leader>bn", ":bn<cr>", { desc = "next buffer" })
