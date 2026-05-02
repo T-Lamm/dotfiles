@@ -11,7 +11,7 @@ vim.pack.add({
     --mason/lsp
     { src = 'https://github.com/williamboman/mason.nvim.git' },
     { src = 'https://github.com/neovim/nvim-lspconfig' },
-    { src = "https://github.com/mason-org/mason-lspconfig.nvim" },
+    { src = "https://github.com/williamboman/mason-lspconfig.nvim" },
     { src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
     --mini.nvim
 --    { src = 'https://github.com/nvim-mini/mini.nvim'},      --require setup 
@@ -30,13 +30,17 @@ vim.pack.add({
     { src = 'https://github.com/windwp/nvim-autopairs'}, 
     --markdowns
     { src = 'https://github.com/MeanderingProgrammer/render-markdown.nvim'},
+    --git 
+    { src = "https://github.com/tpope/vim-fugitive" }, 
+    { src = "https://github.com/sindrets/diffview.nvim"},
+    { src = "https://github.com/folke/tokyonight.nvim"},
+    { src = 'https://github.com/nvim-lualine/lualine.nvim' },
 })
     --interesting plugins
     --{ src = 'https://github.com/karb94/neoscroll.nvim' } for smoothscrolling
     --{ src = "https://github.com/folke/which-key.nvim"}
 
     --looks and feel
---    { src = 'https://github.com/nvim-lualine/lualine.nvim' }, --config prob
     --fast search 
 --    {src = 'https://github.com/dmtrKovalenko/fff.nvim'},
 ------need to config
@@ -46,7 +50,6 @@ vim.pack.add({
 ------git 
 --    { src = "https://github.com/ThePrimeagen/git-worktree.nvim" }, --enabled
 --    { src = "https://github.com/lewis6991/gitsigns.nvim" }, --enabled
---    { src = "https://github.com/tpope/vim-fugitive" }, --enabled
 --    { src = "https://github.com/kdheepak/lazygit.nvim" }, --enabled
 --    { src = 'https://github.com/sindrets/diffview.nvim' }
 --plugins with small setup
@@ -56,3 +59,5 @@ require("plugins.nvim-treesitter")
 require("plugins.nvim-web-devicons")
 require("plugins.nvim-tree")
 require("plugins.nvim-cmp")
+require("plugins.color-scheme")
+require("plugins.statusline")

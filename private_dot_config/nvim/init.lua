@@ -7,4 +7,4 @@ require('lsp')
 require('keymap')
 --require('autocmd')
 --require('statusline.lua')
-
+require('filetype')

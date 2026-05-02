@@ -14,8 +14,8 @@ vim.keymap.set("n", "<C-s>", "<cmd>wincmd j<cr>")
 vim.keymap.set("n", "<C-d>", "<cmd>wincmd l<cr>")
 vim.keymap.set("n", "<C-S-Up>", "<cmd>resize +5<CR>", opts)
 vim.keymap.set("n", "<C-S-Down>", "<cmd>resize -5<CR>", opts)
-vim.keymap.set("n", "<C-S-Left>", "<cmd>vertical resize +5<CR>", opts)
-vim.keymap.set("n", "<C-S-Right>", "<cmd>vertical resize -5<CR>", opts)
+vim.keymap.set("n", "<C-S-Left>", "<cmd>vertical resize -5<CR>", opts)
+vim.keymap.set("n", "<C-S-Right>", "<cmd>vertical resize +5<CR>", opts)
 vim.keymap.set("n", "<leader>we", "<C-W>c" )
 
 
