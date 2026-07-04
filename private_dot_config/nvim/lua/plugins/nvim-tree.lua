@@ -5,7 +5,7 @@ vim.g.loaded_netrwPlugin = 1
 -- pass to setup along with your other config
 require("nvim-tree").setup({
     view = {
-        width = 25,
+        width = 30,
         side = "left",
     },
     filters = {

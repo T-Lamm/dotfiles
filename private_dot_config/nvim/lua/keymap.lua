@@ -1,4 +1,5 @@
 local opt = { noremap = true, silent = true }
+vim.g.maplocalleader = ";"
 --generell natigation
 vim.keymap.set("n", "Q", "<nop>")
 
@@ -7,16 +8,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz" )     ----scrolldown and center cursor
 vim.keymap.set("n", "<leader>t", "<cmd>tabnew<cr>", opt)
 vim.keymap.set("n", "<leader>-", "<cmd>vsplit<cr>", opt)
 vim.keymap.set("n", "<leader>_", "<cmd>split<cr>", opt)
-
-vim.keymap.set("n", "<C-w>", "<cmd>wincmd k<cr>")
-vim.keymap.set("n", "<C-a>", "<cmd>wincmd h<cr>")
-vim.keymap.set("n", "<C-s>", "<cmd>wincmd j<cr>")
-vim.keymap.set("n", "<C-d>", "<cmd>wincmd l<cr>")
-vim.keymap.set("n", "<C-S-Up>", "<cmd>resize +5<CR>", opts)
-vim.keymap.set("n", "<C-S-Down>", "<cmd>resize -5<CR>", opts)
-vim.keymap.set("n", "<C-S-Left>", "<cmd>vertical resize -5<CR>", opts)
-vim.keymap.set("n", "<C-S-Right>", "<cmd>vertical resize +5<CR>", opts)
-vim.keymap.set("n", "<leader>we", "<C-W>c" )
 
 
 --copy paste with system clipboard
@@ -36,12 +27,11 @@ vim.keymap.set("n", "<leader>cd", '<cmd>lua vim.fn.chdir(vim.fn.expand("%:p:h"))
 --lang toggle
 vim.keymap.set("n", "<leader>ls", "<cmd>set spell false <cr>" )
 
-
---Netrw
---
---vim.keymap.set("n", "<leader>zz", "<cmd>:Lexplore %:p:h<cr>")
+--auto format
+vim.keymap.set('n', '<leader>ff', function()
+    vim.lsp.buf.format({ async = true })
+end, { desc = "Format current buffer" })
 --nvim-tree
---vim.keymap.set("")
 vim.keymap.set("n", "<leader>zz", "<cmd>NvimTreeToggle<cr>", opt)
 vim.keymap.set("n", "<leader>zf", "<cmd>NvimTreeFindFile<cr>", opt)
 -- buffers
@@ -54,3 +44,4 @@ vim.keymap.set("n", "<leader>bo", ":%bd|e#<cr>", { desc = "close other buffers" 
 --
 --plugin keybinds
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Toggle Undo Tree" })
+

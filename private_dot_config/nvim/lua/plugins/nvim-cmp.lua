@@ -10,6 +10,21 @@ autopairs.setup({})
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
+
+local cond = require('nvim-autopairs.conds')
+
+-- Find the rule for double quotes and tell it to ignore 'tex' and 'latex' filetypes
+local double_quote_rule = autopairs.get_rule('"')[1]
+
+if double_quote_rule then
+    double_quote_rule:with_pair(cond.not_filetypes({ "tex", "latex" }))
+end
+local Rule = require('nvim-autopairs.rule')
+
+autopairs.add_rules({
+  -- Add a rule for dollar signs (math mode)
+  Rule("$", "$", "tex"),
+})
 -- 3. nvim-cmp Setup
 cmp.setup({
     snippet = {

@@ -10,7 +10,7 @@ vim.lsp.enable({
     --lua
     "lua_ls",
     --Python might need additional setup
-    "ruff",
+    --"ruff",
     "basedpyright",
     --c / c++
     "clangd",

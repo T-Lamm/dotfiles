@@ -30,9 +30,11 @@ vim.pack.add({
     { src = 'https://github.com/windwp/nvim-autopairs'}, 
     --markdowns
     { src = 'https://github.com/MeanderingProgrammer/render-markdown.nvim'},
+    { src = 'https://github.com/lervag/vimtex'},
     --git 
     { src = "https://github.com/tpope/vim-fugitive" }, 
     { src = "https://github.com/sindrets/diffview.nvim"},
+    --styling
     { src = "https://github.com/folke/tokyonight.nvim"},
     { src = 'https://github.com/nvim-lualine/lualine.nvim' },
 })
@@ -43,15 +45,11 @@ vim.pack.add({
     --looks and feel
     --fast search 
 --    {src = 'https://github.com/dmtrKovalenko/fff.nvim'},
-------need to config
---    { src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
-    
 --    { src = 'https://github.com/nvim-mini/mini.pick' },
 ------git 
 --    { src = "https://github.com/ThePrimeagen/git-worktree.nvim" }, --enabled
 --    { src = "https://github.com/lewis6991/gitsigns.nvim" }, --enabled
 --    { src = "https://github.com/kdheepak/lazygit.nvim" }, --enabled
---    { src = 'https://github.com/sindrets/diffview.nvim' }
 --plugins with small setup
 require('plugins')
 --plugins with their own setup file
@@ -61,3 +59,4 @@ require("plugins.nvim-tree")
 require("plugins.nvim-cmp")
 require("plugins.color-scheme")
 require("plugins.statusline")
+--require("plugins.lualine")
