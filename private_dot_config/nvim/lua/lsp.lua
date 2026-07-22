@@ -17,7 +17,9 @@ vim.lsp.enable({
     --latex
     "texlab",
     --rust
-    "rust-analyzer"
+    "rust-analyzer",
+    --vhdl
+    --"vhdl"
 })
 
 

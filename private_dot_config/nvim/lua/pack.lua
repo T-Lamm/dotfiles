@@ -37,15 +37,16 @@ vim.pack.add({
     --styling
     { src = "https://github.com/folke/tokyonight.nvim"},
     { src = 'https://github.com/nvim-lualine/lualine.nvim' },
+    --diagnostics
+    { src = "https://github.com/folke/trouble.nvim"},
+  --{ src = "https://github.com/folke/todo-comments.nvim"},
+
 })
     --interesting plugins
-    --{ src = 'https://github.com/karb94/neoscroll.nvim' } for smoothscrolling
     --{ src = "https://github.com/folke/which-key.nvim"}
 
-    --looks and feel
     --fast search 
 --    {src = 'https://github.com/dmtrKovalenko/fff.nvim'},
---    { src = 'https://github.com/nvim-mini/mini.pick' },
 ------git 
 --    { src = "https://github.com/ThePrimeagen/git-worktree.nvim" }, --enabled
 --    { src = "https://github.com/lewis6991/gitsigns.nvim" }, --enabled

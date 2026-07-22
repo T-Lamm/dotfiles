@@ -24,7 +24,8 @@ vim.opt.termguicolors = true
 --encoding
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
-
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
 --visual
 vim.opt.signcolumn = 'yes'

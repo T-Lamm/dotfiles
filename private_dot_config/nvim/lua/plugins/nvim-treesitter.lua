@@ -1,5 +1,5 @@
 -- treesitter languages
-local tslang = { "lua", "vim", "vimdoc", "python", "bash", "c", "cpp", "latex", "rust", "markdown", "markdown_inline", "html", "yaml"  }
+local tslang = { "lua", "vim", "vimdoc", "python", "bash", "c", "cpp", "latex", "rust", "markdown", "markdown_inline", "html", "yaml", "vhdl"}
 require("nvim-treesitter").install(tslang)
 --define the behavior of plugins
 require('nvim-treesitter').setup {

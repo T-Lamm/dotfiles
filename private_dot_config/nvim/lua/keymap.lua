@@ -15,12 +15,12 @@ vim.keymap.set("v", "<leader>cc", '"+y' )
 vim.keymap.set("n", "<leader>cc", '"+Y' )
 vim.keymap.set("n", "<leader>vv", '"+p' )
 vim.keymap.set("n", "<leader>VV", '"+P' )
-vim.keymap.set("v", "p", '"_dp', opts)
+vim.keymap.set("v", "p", [[_dp]], opts, { desc = "Past over selsection without losing yanked text"})
 
 --toggle line Wrap
 vim.keymap.set("n", "<leader>lw", "<cmd>set wrap!<CR>", { desc = "Toggle Wrap", silent = true })
 
---Terminal spezifik
+--Terminal spezific
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
 --change working dir to current dir
 vim.keymap.set("n", "<leader>cd", '<cmd>lua vim.fn.chdir(vim.fn.expand("%:p:h"))<cr>')
@@ -31,6 +31,9 @@ vim.keymap.set("n", "<leader>ls", "<cmd>set spell false <cr>" )
 vim.keymap.set('n', '<leader>ff', function()
     vim.lsp.buf.format({ async = true })
 end, { desc = "Format current buffer" })
+--indent
+vim.keymap.set("v", ">", ">gv", { desc = "indent and keep selection"})
+vim.keymap.set("v", "<", "<gv", { desc = "Unindent and keep selection"})
 --nvim-tree
 vim.keymap.set("n", "<leader>zz", "<cmd>NvimTreeToggle<cr>", opt)
 vim.keymap.set("n", "<leader>zf", "<cmd>NvimTreeFindFile<cr>", opt)
@@ -43,5 +46,7 @@ vim.keymap.set("n", "<leader>ba", ":%bd<cr>", { desc = "close all buffers" })
 vim.keymap.set("n", "<leader>bo", ":%bd|e#<cr>", { desc = "close other buffers" })
 --
 --plugin keybinds
-vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Toggle Undo Tree" })
-
+vim.keymap.set("n", "<leader>u", function()
+    vim.cmd.packadd("nvim.undotree")
+    require("undotree").open()
+end, { desc = "Toggle undotree"})
