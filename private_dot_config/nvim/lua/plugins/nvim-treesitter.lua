@@ -5,7 +5,7 @@ require("nvim-treesitter").install(tslang)
 require('nvim-treesitter').setup {
     ensure_installed =  tslang,
     highlight = {
-        enable = true, 
+        enable = true,
     },
 }
 

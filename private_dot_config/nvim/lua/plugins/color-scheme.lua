@@ -11,3 +11,4 @@ require("tokyonight").setup({
 
 vim.cmd("colorscheme tokyonight")
 
+require("ibl").setup()

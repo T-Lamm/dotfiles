@@ -1,6 +1,5 @@
 local opt = { noremap = true, silent = true }
-vim.g.maplocalleader = ";"
---generell natigation
+vim.g.maplocalleader = ";" --generell natigation
 vim.keymap.set("n", "Q", "<nop>")
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz" )     ----scrolldown and center cursor
@@ -41,7 +40,7 @@ vim.keymap.set("n", "<leader>zf", "<cmd>NvimTreeFindFile<cr>", opt)
 vim.keymap.set("n", "<leader>b",  "", { desc = "buffers" })
 vim.keymap.set("n", "<leader>bn", ":bn<cr>", { desc = "next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bp<cr>", { desc = "previous buffer" })
-vim.keymap.set("n", "<leader>bq", ":bd<cr>", { desc = "close buffer" })
+vim.keymap.set("n", "<leader>bb", ":bd<cr>", { desc = "close buffer" })
 vim.keymap.set("n", "<leader>ba", ":%bd<cr>", { desc = "close all buffers" })
 vim.keymap.set("n", "<leader>bo", ":%bd|e#<cr>", { desc = "close other buffers" })
 --
