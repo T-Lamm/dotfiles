@@ -1,16 +1,32 @@
-if not is_android then
+-- treesitter languages
+local tslang = {
+    "lua",
+    "vim",
+    "vimdoc",
+    "python",
+    "bash",
+    "c",
+    "cpp",
+    "latex",
+    "rust",
+    "markdown",
+    "markdown_inline",
+    "html",
+    "yaml",
+    "vhdl",
+}
 
-    -- treesitter languages
-    local tslang = { "lua", "vim", "vimdoc", "python", "bash", "c", "cpp", "latex", "rust", "markdown", "markdown_inline", "html", "yaml", "vhdl"}
+if not is_android then
     require("nvim-treesitter").install(tslang)
-    --define the behavior of plugins
-    require('nvim-treesitter').setup {
-        ensure_installed =  tslang,
-        highlight = {
-            enable = true,
-        },
-    }
 end
+
+--define the behavior of plugins
+require("nvim-treesitter").setup({
+    ensure_installed = tslang,
+    highlight = {
+        enable = true,
+    },
+})
 
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "*",

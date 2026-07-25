@@ -38,6 +38,7 @@ vim.opt.spelllang = { 'en_us', 'de' }
 vim.opt.spell = true
 
 vim.opt.virtualedit = "onemore"
+vim.wo.signcolumn = "yes"
 vim.opt.termguicolors = true
 vim.opt.swapfile = false
 
@@ -64,7 +65,7 @@ vim.opt.swapfile = false -- Don't create swap files
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.expand("~/.vim/undo")
 -- completeopt options
---vim.opt.completeopt = { "menuone", "popup", "noinsert" } -- options for completion menu
+vim.opt.completeopt = { "menuone", "preview", "noinsert" } -- options for completion menu
 --
 
 -- Netrw Settings

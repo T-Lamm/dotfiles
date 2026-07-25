@@ -2,7 +2,7 @@
 ---package atm at /home/turtle/.local/share/nvim/
 require('vim._core.ui2').enable({})
 
-local is_android = vim.fn.has('android') == 1
+local is_android = vim.env.TERMUX_VERSION ~= nil
 
 require('pack')
 require('config')

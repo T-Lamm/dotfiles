@@ -20,5 +20,3 @@ require('mason-tool-installer').setup {
     debounce_hours = 10,
     ['mason-lspconfig'] = true,
 }
-
-
