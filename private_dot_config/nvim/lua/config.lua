@@ -63,7 +63,8 @@ vim.opt.writebackup = false -- Don't create backup before writing
 vim.opt.swapfile = false -- Don't create swap files
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.expand("~/.vim/undo")
------vim.opt.completeopt = { "menuone", "popup", "noinsert" } -- options for completion menu
+-- completeopt options
+--vim.opt.completeopt = { "menuone", "popup", "noinsert" } -- options for completion menu
 --
 
 -- Netrw Settings
