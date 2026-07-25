@@ -16,13 +16,12 @@ local tslang = {
     "vhdl",
 }
 
-if not is_android then
-    require("nvim-treesitter").install(tslang)
-end
-
 --define the behavior of plugins
 require("nvim-treesitter").setup({
-    ensure_installed = tslang,
+    ensure_installed = not is_android and tslang or {},
+
+    auto_install = false,
+
     highlight = {
         enable = true,
     },
