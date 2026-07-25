@@ -9,7 +9,7 @@ require('mason-tool-installer').setup {
         "bash-language-server", 
         "clangd", 
         "texlab", 
-        "rust-analyzer",
+        "rust_analyzer",
         "stylua",
         "basedpyright",
         "marksman"

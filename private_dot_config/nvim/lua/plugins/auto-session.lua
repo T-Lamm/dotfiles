@@ -3,4 +3,5 @@ require('auto-session').setup({
 	cwd_change_handling = true
 })
 
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 --vim.keymap.set()

@@ -8,7 +8,7 @@ vim.api.nvim_create_user_command("PackDel", function(opts)
     if opts.args:match("%S") then
         -- Split the arguments into a list and delete them
         local plugins = vim.split(opts.args, "%s+", { trimempty = true })
-        vim.pack.delete(plugins)
+        vim.pack.del(plugins)
     end
     -- If no arguments are passed, the if-block is skipped and nothing happens
 end, { nargs = "*", desc = "Delete plugins :PackDel plugin1 plugin2" })
